@@ -1,11 +1,7 @@
 package id.springboot.example.example1.controller;
 
 import id.springboot.example.example1.model.Author;
-import id.springboot.example.example1.model.Book;
-import id.springboot.example.example1.model.Category;
 import id.springboot.example.example1.repository.AuthorRepository;
-import id.springboot.example.example1.repository.BookRepository;
-import id.springboot.example.example1.repository.CategoryRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
