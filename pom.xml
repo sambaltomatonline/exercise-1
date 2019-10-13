@@ -16,6 +16,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<api.name>book-api</api.name>
 	</properties>
 
 	<dependencies>
@@ -81,6 +82,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>${api.name}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
