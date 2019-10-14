@@ -14,7 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "T_ORDER")
+@Table(name = "t_order")
 public class Order {
 
     @Id
