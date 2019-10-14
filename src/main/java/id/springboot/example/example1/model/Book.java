@@ -13,6 +13,7 @@ import javax.validation.constraints.NotNull;
 @RequiredArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "book")
 public class Book {
 
     @Id

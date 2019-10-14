@@ -17,6 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "author")
 public class Author {
 
     @Id
