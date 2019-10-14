@@ -1,0 +1,49 @@
+version: '3.3'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - db_data:/var/lib/mysql
+     ports:
+       - "33066:3306"
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: 
+       MYSQL_DATABASE: db_example
+       MYSQL_ALLOW_EMPTY_PASSWORD: "yes" 
+
+   author-api:
+     depends_on:
+       - db
+     build: ./docker/author-api/
+     ports:
+       - "13001:13000"
+     restart: always
+     
+   category-api:
+     depends_on:
+       - db
+     build: ./docker/category-api/
+     ports:
+       - "13002:13000"
+     restart: always
+     
+   book-api:
+     depends_on:
+       - db
+     build: ./docker/book-api/
+     ports:
+       - "13003:13000"
+     restart: always
+     
+   order-api:
+     depends_on:
+       - db
+     build: ./docker/order-api/
+     ports:
+       - "13004:13000"
+     restart: always
+     
+volumes:
+    db_data: {}
